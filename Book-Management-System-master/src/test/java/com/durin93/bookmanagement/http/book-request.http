@@ -1,0 +1,51 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+###regist-request
+POST http://localhost:8080/api/books
+Content-Type: application/json
+Authorization:
+
+{"title": "스페인 너는 자유다", "author" : "손미나", "pageNumber" : 10, "releaseDate" : "2006-07-28", "weight" : 15}
+###update-request
+PUT http://localhost:8080/api/books/1
+Content-Type: application/json
+Authorization:
+
+{"title": "여행의 기술", "author" : "알랭 드 보통", "pageNumber" : 328, "releaseDate" : "2011-12-10", "weight" : 470}
+
+###delete-request
+DELETE http://localhost:8080/api/books/1
+Content-Type: application/json
+Authorization:
+
+###rent-request
+PUT http://localhost:8080/api/books/3/rent
+Authorization:
+
+###giveback-request
+PUT http://localhost:8080/api/books/2/giveBack
+Authorization:
+
+
+###show-request
+GET http://localhost:8080/api/books/2
+Authorization:
+
+###search-request
+GET http://localhost:8080/api/books?searchType=title&content=스페인
+Authorization:
+
+###
+
+###show rent books-request
+GET http://localhost:8080/api/books/users/1
+Authorization:
+
+###
+
+
